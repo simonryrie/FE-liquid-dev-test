@@ -1,12 +1,4 @@
-<div class="product-grid grid grid-cols-3 gap-4">
+
 {% for product in collection.products %}
-  <div class="product-card">
-    {{ product.featured_image | image_tag: alt: product.title, class: 'w-full object-cover' }}
-    {% comment %} <img src="{{ product.featured_image }}" alt="{{ product.title }}" class="w-full object-cover"> {% endcomment %}
-    <h2>{{ product.title }}</h2>
-    <p>{{ product.description }}</p>
-    <p>{{ product.price | money }}</p>
-  </div>
-  {% comment %} {{ product | json }} {% endcomment %}
+  {{ product | json }}
 {% endfor %}
-</div>

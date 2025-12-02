@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import { readFileSync } from 'fs';
 import { Liquid } from 'liquidjs';
 import tailwindcss from '@tailwindcss/vite';
+import { viteSingleFile } from 'vite-plugin-singlefile';
 
 function liquidPlugin() {
   const engine = new Liquid();
@@ -96,9 +97,11 @@ function liquidPlugin() {
 }
 
 export default defineConfig({
+  base: './',
   plugins: [
     tailwindcss(),
-    liquidPlugin()
+    liquidPlugin(),
+    viteSingleFile()
   ],
   server: {
     open: true,
