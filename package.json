@@ -20,7 +20,10 @@
     "liquidjs": "^10.24.0"
   },
   "devDependencies": {
+    "@shopify/prettier-plugin-liquid": "^1.10.0",
     "@tailwindcss/vite": "^4.1.17",
+    "prettier": "^3.8.1",
+    "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^4.1.17",
     "vite": "^5.0.0",
     "vite-plugin-singlefile": "^2.3.0"
