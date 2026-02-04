@@ -1,1 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Radio Canada Big", sans-serif;
+
+  --color-surface: #ffffff;
+  --color-on-surface: #09121f;
+  --color-inverse-surface: #09121f;
+  --color-inverse-on-surface: #ffffff;
+  --color-error: #eb0000;
+  --color-error-container: #eb00001a;
+  --color-success: #00920a;
+  --color-success-container: #00920a1a;
+
+  --shadow-card: 0 0 2px 0 rgba(9, 18, 31, 0.2);
+}
