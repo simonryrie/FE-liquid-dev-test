@@ -17,7 +17,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "liquidjs": "^10.24.0"
+    "liquidjs": "^10.24.0",
+    "swiper": "^12.1.0"
   },
   "devDependencies": {
     "@shopify/prettier-plugin-liquid": "^1.10.0",

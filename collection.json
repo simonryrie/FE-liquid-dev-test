@@ -1,302 +1,419 @@
 {
-    "collection": {
-        "id": 437536882994,
-        "title": "Summer Collection",
-        "handle": "summer-collection",
-        "description": "",
-        "published_at": "2023-02-20T07:09:13-05:00",
-        "updated_at": "2024-04-05T10:15:01-04:00",
-        "image": {
-            "id": 1734504284466,
-            "created_at": "2023-02-20T07:09:12-05:00",
-            "src": "/images/kratos-protein-powder.png",
-            "alt": "Kratos Protien Powder"
-        },
-        "products_count": 2,
-        "products": [
-            {
-                "id": 8128531136818,
-                "title": "Pure Whey Protein™",
-                "handle": "pure-whey-protein",
-                "description": "<p>Unleash your strength with Kratos Pure Whey Protein, a premium, fast-absorbing protein formula crafted to support lean muscle growth, enhance recovery, and fuel peak athletic performance. Made from high-quality whey protein concentrate, Kratos delivers a clean, pure protein source without unnecessary fillers—just the nutrients your body needs to perform like a warrior.</p>",
-                "published_at": "2023-01-30T12:14:45-05:00",
-                "created_at": "2023-01-30T12:14:47-05:00",
-                "vendor": "Kratos",
-                "type": "",
-                "tags": [
-                    "protein",
-                    "Best Seller"
-                ],
-                "price": 2199,
-                "price_min": 2199,
-                "price_max": 2199,
-                "available": true,
-                "price_varies": false,
-                "compare_at_price": 2599,
-                "compare_at_price_min": 2599,
-                "compare_at_price_max": 2599,
-                "compare_at_price_varies": false,
-                "variants": [
-                    {
-                        "id": 8128531136819,
-                        "title": "Default Title",
-                        "option1": "Default Title",
-                        "option2": null,
-                        "option3": null,
-                        "sku": null,
-                        "requires_shipping": true,
-                        "taxable": true,
-                        "featured_image": null,
-                        "available": true,
-                        "name": "Pure Whey Protein™",
-                        "public_title": null,
-                        "options": [
-                            "Default Title"
-                        ],
-                        "price": 2199,
-                        "weight": 0,
-                        "compare_at_price": null,
-                        "inventory_management": null,
-                        "barcode": null,
-                        "requires_selling_plan": true,
-                        "selling_plan_allocations": [],
-                        "quantity_rule": {
-                            "min": 1,
-                            "max": null,
-                            "increment": 1
-                        }
-                    }
-                ],
-                "images": [
-                    "/images/single-product.jpg",
-                    "/images/gym-lifestyle-images.png",
-                    "/images/kratos-with-a-protein-shake.png"
-                ],
-                "featured_image": "/images/single-product.jpg",
-                "options": [
-                    "Title"
-                ],
-                "media": [
-                    {
-                        "alt": "Pure Whey Protein",
-                        "id": 32842826285362,
-                        "position": 1,
-                        "preview_image": {
-                            "aspect_ratio": 1.0,
-                            "height": 800,
-                            "width": 800,
-                            "src": "/images/single-product.jpg"
-                        },
-                        "aspect_ratio": 1.0,
-                        "height": 800,
-                        "media_type": "image",
-                        "src": "/images/single-product.jpg",
-                        "width": 800
-                    },
-                    {
-                        "alt": "Gym Lifestyle",
-                        "id": 33087964873010,
-                        "position": 2,
-                        "preview_image": {
-                            "aspect_ratio": 1.0,
-                            "height": 800,
-                            "width": 800,
-                            "src": "/images/gym-lifestyle-images.png"
-                        },
-                        "aspect_ratio": 1.0,
-                        "height": 800,
-                        "media_type": "image",
-                        "src": "/images/gym-lifestyle-images.jpg",
-                        "width": 800
-                    },
-                    {
-                        "alt": "Kratos with Protein Shake",
-                        "id": 33087966871858,
-                        "position": 3,
-                        "preview_image": {
-                            "aspect_ratio": 1.0,
-                            "height": 800,
-                            "width": 800,
-                            "src": "/images/kratos-with-a-protein-shake.png"
-                        },
-                        "aspect_ratio": 1.0,
-                        "height": 800,
-                        "media_type": "image",
-                        "src": "/images/kratos-with-a-protien-shake.jpg",
-                        "width": 800
-                    }
-                ],
-                "metafields": [
-                    {
-                        "namespace": "custom",
-                        "key": "protein_per_serving",
-                        "value": "30g",
-                        "type": "single_line_text_field"
-                    },
-                    {
-                        "namespace": "custom",
-                        "key": "low_calories",
-                        "value": true,
-                        "type": "boolean"
-                    },
-                    {
-                        "namespace": "custom",
-                        "key": "low_sugar",
-                        "value": false,
-                        "type": "boolean"
-                    },
-                    {
-                        "namespace": "custom",
-                        "key": "product_excerpt",
-                        "value": "Our number one bestselling protein for serious gains.",
-                        "type": "single_line_text_field"
-                    }
-                ],
-                "requires_selling_plan": false,
-                "selling_plan_groups": [],
-                "content": "<p>Our number one bestselling protein for serious gains.</p>"
-            },
-            {
-                "id": 8128530940210,
-                "title": "Pure Whey Protein",
-                "handle": "pure-whey-protein-2",
-                "description": "<p>Unleash your strength with Kratos Pure Whey Protein, a premium, fast-absorbing protein formula crafted to support lean muscle growth, enhance recovery, and fuel peak athletic performance. Made from high-quality whey protein concentrate, Kratos delivers a clean, pure protein source without unnecessary fillers—just the nutrients your body needs to perform like a warrior.</p>",
-                "published_at": "2023-01-30T12:14:37-05:00",
-                "created_at": "2023-01-30T12:14:38-05:00",
-                "vendor": "Kratos",
-                "type": "",
-                "tags": [
-                    "protein"
-                ],
-                "price": 4999,
-                "price_min": 4999,
-                "price_max": 4999,
-                "available": true,
-                "price_varies": false,
-                "compare_at_price": null,
-                "compare_at_price_min": 0,
-                "compare_at_price_max": 0,
-                "compare_at_price_varies": false,
-                "variants": [
-                    {
-                        "id": 44503099081010,
-                        "title": "Default Title",
-                        "option1": "Default Title",
-                        "option2": null,
-                        "option3": null,
-                        "sku": null,
-                        "requires_shipping": true,
-                        "taxable": true,
-                        "featured_image": null,
-                        "available": true,
-                        "name": "Pure Whey Protein",
-                        "public_title": null,
-                        "options": [
-                            "Default Title"
-                        ],
-                        "price": 4999,
-                        "weight": 0,
-                        "compare_at_price": null,
-                        "inventory_management": null,
-                        "barcode": null,
-                        "requires_selling_plan": true,
-                        "selling_plan_allocations": [],
-                        "quantity_rule": {
-                            "min": 1,
-                            "max": null,
-                            "increment": 1
-                        }
-                    }
-                ],
-                "images": [
-                    "/images/double-product.jpg",
-                    "/images/gym-lifestyle-images.png",
-                    "/images/lifestyle-protein-power-kratos.png"
-                ],
-                "featured_image": "/images/double-product.jpg",
-                "options": [
-                    "Title"
-                ],
-                "media": [
-                    {
-                        "alt": "Pure Whey Protein",
-                        "id": 32842824909106,
-                        "position": 1,
-                        "preview_image": {
-                            "aspect_ratio": 1.0,
-                            "height": 800,
-                            "width": 800,
-                            "src": "/images/double-product.jpg"
-                        },
-                        "aspect_ratio": 1.0,
-                        "height": 800,
-                        "media_type": "image",
-                        "src": "/images/double-product.jpg",
-                        "width": 800
-                    },
-                    {
-                        "alt": "Gym Lifestyle",
-                        "id": 32842824909107,
-                        "position": 2,
-                        "preview_image": {
-                            "aspect_ratio": 1.0,
-                            "height": 800,
-                            "width": 800,
-                            "src": "/images/gym-lifestyle-images.png"
-                        },
-                        "aspect_ratio": 1.0,
-                        "height": 800,
-                        "media_type": "image",
-                        "src": "/images/gym-lifestyle-images.jpg",
-                        "width": 800
-                    },
-                    {
-                        "alt": "Lifestyle Protein Powder Kratos",
-                        "id": 32842824909108,
-                        "position": 3,
-                        "preview_image": {
-                            "aspect_ratio": 1.0,
-                            "height": 800,
-                            "width": 800,
-                            "src": "/images/lifestyle-protein-power-kratos.png"
-                        },
-                        "aspect_ratio": 1.0,
-                        "height": 800,
-                        "media_type": "image",
-                        "src": "/images/lifestyle-protien-powder-kratos.jpg",
-                        "width": 800
-                    }
-                ],
-                "metafields": [
-                    {
-                        "namespace": "custom",
-                        "key": "protein_per_serving",
-                        "value": "30g",
-                        "type": "single_line_text_field"
-                    },
-                    {
-                        "namespace": "custom",
-                        "key": "low_calories",
-                        "value": true,
-                        "type": "boolean"
-                    },
-                    {
-                        "namespace": "custom",
-                        "key": "low_sugar",
-                        "value": false,
-                        "type": "boolean"
-                    },
-                    {
-                        "namespace": "custom",
-                        "key": "product_excerpt",
-                        "value": "Our number one bestselling protein for serious gains.",
-                        "type": "single_line_text_field"
-                    }
-                ],
-                "requires_selling_plan": false,
-                "selling_plan_groups": [],
-                "content": "<p>Our number one bestselling protein for serious gains.</p>"
+  "collection": {
+    "id": 437536882994,
+    "title": "Summer Collection",
+    "handle": "summer-collection",
+    "description": "",
+    "published_at": "2023-02-20T07:09:13-05:00",
+    "updated_at": "2024-04-05T10:15:01-04:00",
+    "image": {
+      "id": 1734504284466,
+      "created_at": "2023-02-20T07:09:12-05:00",
+      "src": "/images/kratos-protein-powder.png",
+      "alt": "Kratos Protien Powder"
+    },
+    "products_count": 2,
+    "products": [
+      {
+        "id": 8128531136818,
+        "title": "Pure Whey Protein™",
+        "handle": "pure-whey-protein",
+        "description": "<p>Unleash your strength with Kratos Pure Whey Protein, a premium, fast-absorbing protein formula crafted to support lean muscle growth, enhance recovery, and fuel peak athletic performance. Made from high-quality whey protein concentrate, Kratos delivers a clean, pure protein source without unnecessary fillers—just the nutrients your body needs to perform like a warrior.</p>",
+        "published_at": "2023-01-30T12:14:45-05:00",
+        "created_at": "2023-01-30T12:14:47-05:00",
+        "vendor": "Kratos",
+        "type": "",
+        "tags": ["protein", "Best Seller"],
+        "price": 2199,
+        "price_min": 2199,
+        "price_max": 2199,
+        "available": true,
+        "price_varies": false,
+        "compare_at_price": 2599,
+        "compare_at_price_min": 2599,
+        "compare_at_price_max": 2599,
+        "compare_at_price_varies": false,
+        "variants": [
+          {
+            "id": 8128531136819,
+            "title": "Default Title",
+            "option1": "Default Title",
+            "option2": null,
+            "option3": null,
+            "sku": null,
+            "requires_shipping": true,
+            "taxable": true,
+            "featured_image": null,
+            "available": true,
+            "name": "Pure Whey Protein™",
+            "public_title": null,
+            "options": ["Default Title"],
+            "price": 2199,
+            "weight": 0,
+            "compare_at_price": null,
+            "inventory_management": null,
+            "barcode": null,
+            "requires_selling_plan": true,
+            "selling_plan_allocations": [],
+            "quantity_rule": {
+              "min": 1,
+              "max": null,
+              "increment": 1
             }
-        ]
-    }
+          }
+        ],
+        "images": [
+          "/images/single-product.jpg",
+          "/images/gym-lifestyle-images.png",
+          "/images/kratos-with-a-protein-shake.png"
+        ],
+        "featured_image": "/images/single-product.jpg",
+        "options": ["Title"],
+        "media": [
+          {
+            "alt": "Pure Whey Protein",
+            "id": 32842826285362,
+            "position": 1,
+            "preview_image": {
+              "aspect_ratio": 1.0,
+              "height": 800,
+              "width": 800,
+              "src": "/images/single-product.jpg"
+            },
+            "aspect_ratio": 1.0,
+            "height": 800,
+            "media_type": "image",
+            "src": "/images/single-product.jpg",
+            "width": 800
+          },
+          {
+            "alt": "Gym Lifestyle",
+            "id": 33087964873010,
+            "position": 2,
+            "preview_image": {
+              "aspect_ratio": 1.0,
+              "height": 800,
+              "width": 800,
+              "src": "/images/gym-lifestyle-images.png"
+            },
+            "aspect_ratio": 1.0,
+            "height": 800,
+            "media_type": "image",
+            "src": "/images/gym-lifestyle-images.png",
+            "width": 800
+          },
+          {
+            "alt": "Kratos with Protein Shake",
+            "id": 33087966871858,
+            "position": 3,
+            "preview_image": {
+              "aspect_ratio": 1.0,
+              "height": 800,
+              "width": 800,
+              "src": "/images/kratos-with-a-protein-shake.png"
+            },
+            "aspect_ratio": 1.0,
+            "height": 800,
+            "media_type": "image",
+            "src": "/images/kratos-with-a-protein-shake.png",
+            "width": 800
+          }
+        ],
+        "metafields": [
+          {
+            "namespace": "custom",
+            "key": "protein_per_serving",
+            "value": "30g",
+            "type": "single_line_text_field"
+          },
+          {
+            "namespace": "custom",
+            "key": "low_calories",
+            "value": true,
+            "type": "boolean"
+          },
+          {
+            "namespace": "custom",
+            "key": "low_sugar",
+            "value": false,
+            "type": "boolean"
+          },
+          {
+            "namespace": "custom",
+            "key": "product_excerpt",
+            "value": "Our number one bestselling protein for serious gains.",
+            "type": "single_line_text_field"
+          }
+        ],
+        "requires_selling_plan": false,
+        "selling_plan_groups": [],
+        "content": "<p>Our number one bestselling protein for serious gains.</p>"
+      },
+      {
+        "id": 8128530940210,
+        "title": "Pure Whey Protein",
+        "handle": "pure-whey-protein-2",
+        "description": "<p>Unleash your strength with Kratos Pure Whey Protein, a premium, fast-absorbing protein formula crafted to support lean muscle growth, enhance recovery, and fuel peak athletic performance. Made from high-quality whey protein concentrate, Kratos delivers a clean, pure protein source without unnecessary fillers—just the nutrients your body needs to perform like a warrior.</p>",
+        "published_at": "2023-01-30T12:14:37-05:00",
+        "created_at": "2023-01-30T12:14:38-05:00",
+        "vendor": "Kratos",
+        "type": "",
+        "tags": ["protein"],
+        "price": 4999,
+        "price_min": 4999,
+        "price_max": 4999,
+        "available": true,
+        "price_varies": false,
+        "compare_at_price": null,
+        "compare_at_price_min": 0,
+        "compare_at_price_max": 0,
+        "compare_at_price_varies": false,
+        "variants": [
+          {
+            "id": 44503099081010,
+            "title": "Default Title",
+            "option1": "Default Title",
+            "option2": null,
+            "option3": null,
+            "sku": null,
+            "requires_shipping": true,
+            "taxable": true,
+            "featured_image": null,
+            "available": true,
+            "name": "Pure Whey Protein",
+            "public_title": null,
+            "options": ["Default Title"],
+            "price": 4999,
+            "weight": 0,
+            "compare_at_price": null,
+            "inventory_management": null,
+            "barcode": null,
+            "requires_selling_plan": true,
+            "selling_plan_allocations": [],
+            "quantity_rule": {
+              "min": 1,
+              "max": null,
+              "increment": 1
+            }
+          }
+        ],
+        "images": [
+          "/images/double-product.jpg",
+          "/images/gym-lifestyle-images.png",
+          "/images/lifestyle-protein-power-kratos.png"
+        ],
+        "featured_image": "/images/double-product.jpg",
+        "options": ["Title"],
+        "media": [
+          {
+            "alt": "Pure Whey Protein",
+            "id": 32842824909106,
+            "position": 1,
+            "preview_image": {
+              "aspect_ratio": 1.0,
+              "height": 800,
+              "width": 800,
+              "src": "/images/double-product.jpg"
+            },
+            "aspect_ratio": 1.0,
+            "height": 800,
+            "media_type": "image",
+            "src": "/images/double-product.jpg",
+            "width": 800
+          },
+          {
+            "alt": "Gym Lifestyle",
+            "id": 32842824909107,
+            "position": 2,
+            "preview_image": {
+              "aspect_ratio": 1.0,
+              "height": 800,
+              "width": 800,
+              "src": "/images/gym-lifestyle-images.png"
+            },
+            "aspect_ratio": 1.0,
+            "height": 800,
+            "media_type": "image",
+            "src": "/images/gym-lifestyle-images.png",
+            "width": 800
+          },
+          {
+            "alt": "Lifestyle Protein Powder Kratos",
+            "id": 32842824909108,
+            "position": 3,
+            "preview_image": {
+              "aspect_ratio": 1.0,
+              "height": 800,
+              "width": 800,
+              "src": "/images/lifestyle-protein-power-kratos.png"
+            },
+            "aspect_ratio": 1.0,
+            "height": 800,
+            "media_type": "image",
+            "src": "/images/lifestyle-protein-power-kratos.png",
+            "width": 800
+          }
+        ],
+        "metafields": [
+          {
+            "namespace": "custom",
+            "key": "protein_per_serving",
+            "value": "30g",
+            "type": "single_line_text_field"
+          },
+          {
+            "namespace": "custom",
+            "key": "low_calories",
+            "value": true,
+            "type": "boolean"
+          },
+          {
+            "namespace": "custom",
+            "key": "low_sugar",
+            "value": false,
+            "type": "boolean"
+          },
+          {
+            "namespace": "custom",
+            "key": "product_excerpt",
+            "value": "Our number one bestselling protein for serious gains.",
+            "type": "single_line_text_field"
+          }
+        ],
+        "requires_selling_plan": false,
+        "selling_plan_groups": [],
+        "content": "<p>Our number one bestselling protein for serious gains.</p>"
+      },
+      {
+        "id": 8128531136820,
+        "title": "Pure Whey Protein™ Bundle",
+        "handle": "pure-whey-protein-bundle",
+        "description": "<p>Unleash your strength with Kratos Pure Whey Protein, a premium, fast-absorbing protein formula crafted to support lean muscle growth, enhance recovery, and fuel peak athletic performance. Made from high-quality whey protein concentrate, Kratos delivers a clean, pure protein source without unnecessary fillers—just the nutrients your body needs to perform like a warrior.</p>",
+        "published_at": "2023-01-30T12:14:45-05:00",
+        "created_at": "2023-01-30T12:14:47-05:00",
+        "vendor": "Kratos",
+        "type": "",
+        "tags": ["protein", "Best Seller"],
+        "price": 2199,
+        "price_min": 2199,
+        "price_max": 3999,
+        "available": false,
+        "price_varies": true,
+        "compare_at_price": 2599,
+        "compare_at_price_min": 2599,
+        "compare_at_price_max": 4599,
+        "compare_at_price_varies": true,
+        "variants": [
+          {
+            "id": 8128531136821,
+            "title": "Small",
+            "option1": "Small",
+            "option2": null,
+            "option3": null,
+            "sku": null,
+            "requires_shipping": true,
+            "taxable": true,
+            "featured_image": null,
+            "available": false,
+            "name": "Pure Whey Protein™ Bundle - Small",
+            "public_title": "Small",
+            "options": ["Small"],
+            "price": 2199,
+            "weight": 0,
+            "compare_at_price": 2599,
+            "inventory_management": null,
+            "barcode": null,
+            "requires_selling_plan": true,
+            "selling_plan_allocations": [],
+            "quantity_rule": {
+              "min": 1,
+              "max": null,
+              "increment": 1
+            }
+          },
+          {
+            "id": 8128531136822,
+            "title": "Large",
+            "option1": "Large",
+            "option2": null,
+            "option3": null,
+            "sku": null,
+            "requires_shipping": true,
+            "taxable": true,
+            "featured_image": null,
+            "available": false,
+            "name": "Pure Whey Protein™ Bundle - Large",
+            "public_title": "Large",
+            "options": ["Large"],
+            "price": 3999,
+            "weight": 0,
+            "compare_at_price": 4599,
+            "inventory_management": null,
+            "barcode": null,
+            "requires_selling_plan": true,
+            "selling_plan_allocations": [],
+            "quantity_rule": {
+              "min": 1,
+              "max": null,
+              "increment": 1
+            }
+          }
+        ],
+        "images": [
+          "/images/single-product.jpg",
+          "/images/gym-lifestyle-images.png",
+          "/images/kratos-with-a-protein-shake.png"
+        ],
+        "featured_image": "/images/single-product.jpg",
+        "options": ["Size"],
+        "media": [
+          {
+            "alt": "Pure Whey Protein",
+            "id": 32842826285363,
+            "position": 1,
+            "preview_image": {
+              "aspect_ratio": 1.0,
+              "height": 800,
+              "width": 800,
+              "src": "/images/single-product.jpg"
+            },
+            "aspect_ratio": 1.0,
+            "height": 800,
+            "media_type": "image",
+            "src": "/images/single-product.jpg",
+            "width": 800
+          }
+        ],
+        "metafields": [
+          {
+            "namespace": "custom",
+            "key": "protein_per_serving",
+            "value": "30g",
+            "type": "single_line_text_field"
+          },
+          {
+            "namespace": "custom",
+            "key": "low_calories",
+            "value": false,
+            "type": "boolean"
+          },
+          {
+            "namespace": "custom",
+            "key": "low_sugar",
+            "value": true,
+            "type": "boolean"
+          },
+          {
+            "namespace": "custom",
+            "key": "product_excerpt",
+            "value": "Our number one bestselling protein for serious gains.",
+            "type": "single_line_text_field"
+          }
+        ],
+        "requires_selling_plan": false,
+        "selling_plan_groups": [],
+        "content": "<p>Our number one bestselling protein for serious gains.</p>"
+      }
+    ]
+  }
 }

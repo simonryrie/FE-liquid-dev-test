@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap");
 @import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/pagination";
 
 @theme {
   --font-sans: "Radio Canada Big", sans-serif;
@@ -12,6 +14,30 @@
   --color-error-container: #eb00001a;
   --color-success: #00920a;
   --color-success-container: #00920a1a;
+  --color-disabled-surface: #e5e7eb;
+  --color-disabled-on-surface: #6b7280;
 
   --shadow-card: 0 0 2px 0 rgba(9, 18, 31, 0.2);
+}
+
+.swiper-pagination-bullet {
+  width: 6px !important;
+  height: 6px !important;
+  margin: 0 2px !important;
+  border-radius: 9999px !important;
+  background: color-mix(
+    in srgb,
+    var(--color-on-surface) 20%,
+    transparent
+  ) !important;
+  opacity: 1 !important;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.swiper-pagination-bullet-active {
+  width: 16px !important;
+  margin: 0 2px !important;
+  border-radius: 100px !important;
+  background: var(--color-on-surface) !important;
 }

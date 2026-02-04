@@ -1,4 +1,204 @@
+{% assign tag_classes = 'rounded-full px-2 py-1 text-xs' %}
+{% assign badge_tags = 'best seller,new' | split: ',' %}
 
-{% for product in collection.products %}
-  {{ product | json }}
-{% endfor %}
+<div class="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-4">
+  {% for product in collection.products %}
+    {% comment %} Badge tag display logic {% endcomment %}
+    {% assign display_badge_tag = '' %}
+    {% for tag in product.tags %}
+      {% assign tag_lowercase = tag | downcase %}
+      {% if badge_tags contains tag_lowercase %}
+        {% assign display_badge_tag = tag %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+
+    {% comment %} Product gallery carousel - check if media has images, fallback to product.images {% endcomment %}
+    {% assign media_image_count = 0 %}
+    {% for mediaItem in product.media %}
+      {% if mediaItem.media_type == 'image' %}
+        {% assign media_image_count = media_image_count | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+    {% if media_image_count == 0 and product.images.size > 0 %}
+      {% assign use_fallback_images = true %}
+    {% else %}
+      {% assign use_fallback_images = false %}
+    {% endif %}
+
+    {% comment %} Metafields display logic - product excerpt / USPs {% endcomment %}
+    {% assign display_product_excerpt = '' %}
+    {% assign display_usps = '' | split: '' %}
+    {% for metafield in product.metafields %}
+      {% if metafield.key == 'product_excerpt' %}
+        {% assign display_product_excerpt = metafield.value %}
+      {% elsif metafield.key == 'protein_per_serving' %}
+        {% assign usp_value = metafield.value | append: ' Protein' | split: '|||' %}
+        {% assign display_usps = display_usps | concat: usp_value %}
+      {% elsif metafield.key == 'low_calories' and metafield.value == true %}
+        {% assign usp_value = 'Low Calories' | split: '|||' %}
+        {% assign display_usps = display_usps | concat: usp_value %}
+      {% elsif metafield.key == 'low_sugar' and metafield.value == true %}
+        {% assign usp_value = 'Low Sugar' | split: '|||' %}
+        {% assign display_usps = display_usps | concat: usp_value %}
+      {% endif %}
+    {% endfor %}
+
+    {% comment %} Price display logic {% endcomment %}
+    {% if product.price_varies or product.price_min != product.price_max %}
+      {% capture display_price %}{{ product.price_min | money }} - {{ product.price_max | money }}{% endcapture %}
+    {% else %}
+      {% assign display_price = product.price | money %}
+    {% endif %}
+
+    {% comment %} Compare price display logic {% endcomment %}
+    {% assign show_comparison = false %}
+    {% if product.compare_at_price_min > product.price_min or product.compare_at_price_max > product.price_max %}
+      {% assign show_comparison = true %}
+      {% if product.compare_at_price_varies or product.compare_at_price_min != product.compare_at_price_max %}
+        {% capture display_compare_price %}{{ product.compare_at_price_min | money }} - {{ product.compare_at_price_max | money }}{% endcapture %}
+      {% else %}
+        {% assign display_compare_price = product.compare_at_price | money %}
+      {% endif %}
+      {% assign price_difference = product.compare_at_price_max | minus: product.price_min %}
+    {% endif %}
+
+    {% assign quantity = 1 %}
+    {% assign is_available = false %}
+    {% for variant in product.variants %}
+      {% if variant.available -%}
+        {%- assign is_available = true -%}
+        {%- break -%}
+      {%- endif %}
+    {% endfor %}
+
+    <article class="flex min-h-full flex-col">
+      <a href="/{{collection.handle}}/{{ product.handle }}" class="relative block aspect-square w-full">
+        <div class="swiper h-full w-full">
+          <div class="swiper-wrapper">
+            {% if use_fallback_images %}
+              {% for image_url in product.images %}
+                <div class="swiper-slide">
+                  <img
+                    src="{{ image_url }}"
+                    alt="{{ product.title }}"
+                    class="h-full w-full object-cover"
+                    loading="lazy"
+                    width="800"
+                    height="800"
+                  >
+                </div>
+              {% endfor %}
+            {% else %}
+              {% for mediaItem in product.media %}
+                {% if mediaItem.media_type == 'image' %}
+                  <div class="swiper-slide">
+                    <img
+                      src="{{ mediaItem.src }}"
+                      alt="{{ mediaItem.alt | default: product.title }}"
+                      class="h-full w-full object-cover"
+                      loading="lazy"
+                      width="{{ mediaItem.width | default: 800 }}"
+                      height="{{ mediaItem.height | default: 800 }}"
+                    >
+                  </div>
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        {% if display_badge_tag != blank %}
+          <div class="bg-inverse-surface text-inverse-on-surface absolute top-0 left-0 z-10 m-2 capitalize {{ tag_classes }}">
+            {{ display_badge_tag }}
+          </div>
+        {% endif %}
+      </a>
+      <div class="shadow-card flex flex-1 flex-col gap-4 rounded-b-xl p-6">
+        <div class="flex flex-col gap-2">
+          {% if product.title != blank %}
+            <h2 class="font-semibold">{{ product.title }}</h2>
+          {% endif %}
+          {% if display_product_excerpt != blank %}
+            <p class="text-sm">{{ display_product_excerpt | capitalize }}</p>
+          {% endif %}
+          <p class="text-xl">{{ display_price }}</p>
+          {% if show_comparison %}
+            <div class="flex gap-2">
+              <div class="border-error bg-error-container border line-through {{tag_classes}}">
+                Was {{ display_compare_price }}
+              </div>
+              <div class="border-success bg-success-container border {{tag_classes}}">
+                {% if product.price_varies %}Save up to{% else %}Save{% endif %}
+                {{ price_difference | money }}
+              </div>
+            </div>
+          {% endif %}
+        </div>
+        {% if display_usps.size > 0 %}
+          <div class="flex items-center gap-2">
+            {% for usp in display_usps %}
+              <span class="text-xs">{{ usp }}</span>
+              {% unless forloop.last %}
+                <img src="/images/svgs/ellipse.svg" width="4px" height="4px" alt="">
+              {% endunless %}
+            {% endfor %}
+          </div>
+        {% endif %}
+        <div class="mt-auto flex h-[53px] items-center gap-2">
+          <div
+            class="
+              flex h-full items-center gap-4 rounded-xl border p-2
+              {% if is_available %}
+                border-on-surface cursor-default
+              {% else %}
+                border-disabled-on-surface bg-disabled-surface text-disabled-on-surface cursor-default opacity-70
+              {% endif %}
+            "
+            data-quantity-selector
+          >
+            <button
+              type="button"
+              class="{% if is_available %}cursor-pointer{% else %}cursor-default opacity-60{% endif %}"
+              {% unless is_available %}
+                disabled
+              {% endunless %}
+              data-quantity-decrement
+            >
+              <img src="/images/svgs/subtract-line.svg" width="24px" height="24px" alt="Decrease quantity">
+            </button>
+            <span class="w-6 text-center text-sm" data-quantity-value>{{ quantity }}</span>
+            <button
+              type="button"
+              class="{% if is_available %}cursor-pointer{% else %}cursor-default opacity-60{% endif %}"
+              {% unless is_available %}
+                disabled
+              {% endunless %}
+              data-quantity-increment
+            >
+              <img src="/images/svgs/add-fill.svg" width="24px" height="24px" alt="Increase quantity">
+            </button>
+          </div>
+          <button
+            type="button"
+            class="
+              h-full items-center rounded-xl p-4 text-base font-semibold
+              {% if is_available %}
+                bg-inverse-surface text-inverse-on-surface cursor-pointer
+              {% else %}
+                bg-disabled-surface text-disabled-on-surface cursor-default opacity-70
+              {% endif %}
+            "
+            aria-label="{% if is_available %}Add {{ product.title }} to cart{% else %}{{ product.title }} is sold out{% endif %}"
+            {% unless is_available %}
+              disabled
+            {% endunless %}
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </article>
+  {% endfor %}
+</div>
